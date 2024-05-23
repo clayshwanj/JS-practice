@@ -24,12 +24,36 @@ let max = 5000;
 function getUserInput() {
   let userInput = document.getElementById("amount").value;
 
+  let errorMessage = document.getElementById("error");
+
+  let newMessage = document.getElementById("success");
+
+  // When userInput is out of range
   if (userInput < min) {
     console.log("Deposit amount is too little. It needs to be more than ", min);
+
+    errorMessage.innerText =
+      "Deposit amount is too little. It needs to be more than 20!";
+    newMessage.innerText = "";
     return;
   } else if (userInput > max) {
     console.log("Deposit amount is too much. It needs to be less than ", max);
+
+    errorMessage.innerText =
+      "Deposit amount is too much. It needs to be less than 5000!";
+    newMessage.innerText = "";
     return;
+  }
+
+  // When userInput is within range
+  if ((userInput = min)) {
+    console.log("Deposit was successful");
+    newMessage.innerText = "Deposit was successful";
+    errorMessage.innerText = "";
+  } else if ((userInput = max)) {
+    console.log("Deposit was successful");
+    newMessage.innerText = "Deposit was successful";
+    errorMessage.innerText = "";
   }
 
   console.log("The value of amount is: ", userInput);
@@ -58,3 +82,8 @@ function getUserInput() {
 let submitButton = document.getElementById("deposit-btn");
 
 submitButton.addEventListener("click", getUserInput);
+
+// usingalert
+// function display() {
+//   alert("Deposit amount is too little. It needs to be more than " + 20);
+// }
