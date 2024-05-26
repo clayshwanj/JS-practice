@@ -45,17 +45,6 @@ function getUserInput() {
     return;
   }
 
-  // When userInput is within range
-  if ((userInput = min)) {
-    console.log("Deposit was successful");
-    newMessage.innerText = "Deposit was successful";
-    errorMessage.innerText = "";
-  } else if ((userInput = max)) {
-    console.log("Deposit was successful");
-    newMessage.innerText = "Deposit was successful";
-    errorMessage.innerText = "";
-  }
-
   console.log("The value of amount is: ", userInput);
   console.log("The type of amount is: ", typeof userInput);
 
@@ -77,6 +66,10 @@ function getUserInput() {
   console.log("The new balance is: ", newBalance);
 
   balanceElement.innerText = newBalance;
+
+  // When userInput is within range
+  newMessage.innerText = "Deposit was successful";
+  errorMessage.innerText = "";
 }
 
 let submitButton = document.getElementById("deposit-btn");

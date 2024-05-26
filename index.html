@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <h2>Deposit</h2>
     <p>
       Your current balance is: KSH
       <strong><span id="balance">1000</span></strong>
@@ -17,9 +18,23 @@
     <!-- <form id="deposit-form"> -->
     <input type="number" id="amount" />
     <button id="deposit-btn" type="submit">Deposit</button>
+
     <p id="success" style="color: darkgreen"></p>
+
+    <h2>Withdraw</h2>
+    <p>
+      Your current balance is: KSH
+      <strong><span id="bal">10000</span></strong>
+    </p>
+    <p>Enter the amount that you would like to withdraw:</p>
+    <input type="number" id="amt" />
+    <button id="withdraw" type="submit">Withdraw</button>
+    <p id="withdrawal" style="color: blue"></p>
+    <p id="err" style="color: chocolate"></p>
+
     <!-- </form> -->
 
     <script src="script.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
